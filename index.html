@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Home</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.2.2/aframe-ar.min.js"></script>
-</head>
-<body style="margin: 0; overflow: hidden">
-    <script type="text/javascript" src="script.js"></script>
-</body>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+
+        <!-- Box Rose -->
+        <!--
+        <a-box position='0 0 0' material='opacity: 0.5; color: #F70087;'>
+        </a-box>
+        -->
+
+        <!-- Dinosaure -->
+        <!--
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+          rotation="-90 0 0"
+        ></a-entity>
+        -->
+
+        <!-- Text -->
+        <!--  -->
+        <a-entity 
+        position="0 0 0" 
+        geometry="primitive: plane; height: 3; width: 3"
+        material="color: black"
+        rotation="-90 0 0"
+        ></a-entity>   
+        
+        <a-entity
+        position="0 0.5 0" 
+        text="font: dejavu; align: center; width: 3; color: white; value: Projet IV" 
+        rotation="-90 0 0">
+        ></a-entity>   
+
+        <a-entity
+        position="0 0.5 0.2" 
+        text="font: dejavu; align: center; width: 3; color: white; value: Aile d'iCare" 
+        rotation="-90 0 0">
+        ></a-entity>  
+
+        <a-entity
+        position="0 0.5 -0.2" 
+        text="font: dejavu; align: center; width: 3; color: white; value: Test pour Rapport" 
+        rotation="-90 0 0">
+        ></a-entity>  
+
+        <a-asset>
+          <img id="JC" src="Image\JC_princesse.jpeg" />
+          <img id="Marc" src="Image\Marc_wow.jpg" />
+        </a-asset>
+        <!--
+        <a-image 
+        src="#JC" 
+        width="0.4" 
+        heigt="0.6"
+        rotation="-90 0 0"
+        position="-0.8 0.5 -0.6">
+        ></a-image>
+
+        <a-image 
+        src="#Marc" 
+        width="0.4" 
+        heigt="0.6"
+        rotation="-90 0 0"
+        position="0.8 0.5 -0.6">
+        ></a-image>
+        -->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
