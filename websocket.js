@@ -1,4 +1,4 @@
-const serverIP = "132.207.84.26";
+const serverIP = "132.207.84.40";
 const serverPORT = "5000"; 
 const reconnectTimeout = 5;
 var wsReconnect = 0;
