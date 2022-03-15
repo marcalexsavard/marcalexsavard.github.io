@@ -3,9 +3,23 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script >
+    const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
+
+    async function getISS() {
+      const response = await fetch(api_url);
+      const data = await response.json();
+      const {latitude,longitude}=data;
+
+      document.getElementById('lat').textContent = latitude;
+      document.getElementById('lon').textContent = longitude;
+    }
+    getISS();
+  </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
+        <p> lat : <span id="lat"></span></p>
 
         <!-- Box Rose -->
         <!--
@@ -36,13 +50,16 @@
         position="0 0.5 0" 
         text="font: dejavu; align: center; width: 3; color: white; value: Projet IV" 
         rotation="-90 0 0">
-        ></a-entity>   
+        ></a-entity>  
 
+        
         <a-entity
         position="0 0.5 0.2" 
-        text="font: dejavu; align: center; width: 3; color: white; value: Aile d'iCare" 
+        text="font: dejavu; align: center; width: 3; color: white; value: "
         rotation="-90 0 0">
         ></a-entity>  
+        
+        
 
         <a-entity
         position="0 0.5 -0.2" 
@@ -54,6 +71,7 @@
           <img id="JC" src="Image\JC_princesse.jpeg" />
           <img id="Marc" src="Image\Marc_wow.jpg" />
         </a-asset>
+
         <!--
         <a-image 
         src="#JC" 
