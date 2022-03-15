@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script src="./websocket.js"></script>
+
+  <!--
   <script >
     const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
 
@@ -16,10 +18,15 @@
     }
     getISS();
   </script>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
+  -->
+
+  <body style="margin : 0px; overflow: hidden;" onpageshow="wsConnect()" onpagehide="wsDisconnect()">
+    <a-scene vr-mode-ui='enabled: false;' embedded arjs='debugUIEnabled: false;'>
+       <a-marker preset="hiro">
+
+        <!--
         <p style="color:white;text-align:center;"> lat : <span id="lat"></span></p>
+        -->
 
         <!-- Box Rose -->
         <!--
@@ -38,7 +45,7 @@
         -->
 
         <!-- Text -->
-        <!--  -->
+         
         <a-entity 
         position="0 0 0" 
         geometry="primitive: plane; height: 3; width: 3"
@@ -71,6 +78,23 @@
           <img id="JC" src="Image\JC_princesse.jpeg" />
           <img id="Marc" src="Image\Marc_wow.jpg" />
         </a-asset>
+        
+        
+
+        <!--
+         <a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
+                <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
+                    <a-entity position="-0.1 0.9 0.2" text="value: Right Aileron; align: center; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 0.3 0.2" text="value: POS : ; align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.2 0.2" text="value: LOAD : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.7 0.2" text="value: LOADING : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-ail-pos' position="3 0.3 0.2" text="value: 5; align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-ail-ld' position="3 -0.2 0.2" text="value: 3578 lb;  align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-ail-lding' position="3 -0.7 0.2" text="value: ON;  align: left; color: black; width: 6; height: auto"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
+            </a-entity>
+        -->
 
         <!--
         <a-image 
