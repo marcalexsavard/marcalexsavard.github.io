@@ -13,8 +13,7 @@
       const data = await response.json();
       const {latitude,longitude}=data;
 
-      //document.getElementById('lat').textContent = latitude;
-      document.getElementById('lat').setAttribute('text', "value: ", "; align: left; color: black; width: 6; height: auto");
+      document.getElementById('lat').textContent = latitude;
       document.getElementById('lon').textContent = longitude;
     }
     getISS();
