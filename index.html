@@ -5,7 +5,7 @@
   <script src="./websocket.js"></script>
 
   
-  <script >
+  <script>
     const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
 
     async function getISS() {
@@ -19,6 +19,10 @@
     getISS();
   </script>
 
+  <script>
+  const element = document.getElementById("id01");
+  element.innerHTML = 'lat';
+  </script>
 
   <body style="margin : 0px; overflow: hidden;" onpageshow="wsConnect()" onpagehide="wsDisconnect()">
     <a-scene vr-mode-ui='enabled: false;' embedded arjs='debugUIEnabled: false;'>
@@ -45,7 +49,7 @@
         -->
 
         <!-- Text -->
-        <!--
+        
         <a-entity 
         position="0 0 0" 
         geometry="primitive: plane; height: 3; width: 3"
@@ -61,8 +65,9 @@
 
         
         <a-entity
+        id="id01"
         position="0 0.5 0.2" 
-        text="font: dejavu; align: center; width: 3; color: white; value: "
+        text="font: dejavu; align: center; width: 3; color: white; value: Allo"
         rotation="-90 0 0">
         ></a-entity>  
         
@@ -79,9 +84,9 @@
           <img id="Marc" src="Image\Marc_wow.jpg" />
         </a-asset>
         
-        -->
+      
 
-        
+        <!--
          <a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
                 <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
                     <a-entity position="-0.1 0.9 0.2" text="value: Right Aileron; align: center; color: black; width: 6; height: auto"></a-entity>
@@ -94,7 +99,9 @@
                 </a-entity>
                 <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
             </a-entity>
+        -->
         
+
 
         <!--
         <a-image 
