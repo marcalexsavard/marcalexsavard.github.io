@@ -19,10 +19,7 @@
     getISS();
   </script>
   
-  <script>
-  const element = document.getElementById("id01");
-  element.innerHTML = 'lat';
-  </script>
+  
 
   <body style="margin : 0px; overflow: hidden;" onpageshow="wsConnect()" onpagehide="wsDisconnect()">
     <a-scene vr-mode-ui='enabled: false;' embedded arjs='debugUIEnabled: false;'>
@@ -124,4 +121,8 @@
       <a-entity camera></a-entity>
     </a-scene>
   </body>
+  <script>
+  const element = document.getElementById("id01");
+  element.innerHTML = 'lat';
+  </script>
 </html>
