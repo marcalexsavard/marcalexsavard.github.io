@@ -1,0 +1,89 @@
+ion-header.md ion-title {
+  margin: 10px 0;
+}
+
+ion-header.ios ion-title {
+  position: relative;
+  font-size: x-large;
+  top: -20%;
+  color: var(--ion-color-primary);
+}
+
+ion-card#axis-data ion-item {
+
+  --color: rgb(19, 2, 2);
+  --background: rgb(122, 155, 206);
+  text-align: center;
+  padding-left: 3% ;
+  padding-right: 3%;
+  position:relative;
+  top: 10%;
+  font-size: 80%;
+}
+
+ion-card#axis-selection {
+
+  /** position:absolute;
+  // top:10%; **/
+  width:98%; 
+
+}
+
+ion-card#axis-selection ion-item#change-mode {
+  padding-left: 0%;
+  margin-left: 70%;
+  margin-right: 0%;
+  --width: 6%;
+}
+
+ion-card#axis-data {
+
+  /** position:absolute;
+  // top:10%; **/
+  width:98%; 
+  height:50%;
+
+}
+
+ion-card#axis-selection ion-card-content ion-item {
+
+  color:rgb(17, 2, 2);
+  --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+  text-align: center;
+  
+}
+
+ion-card#axis-selection ion-card-content ion-item.selected {
+
+  --background: var(--ion-color-primary);
+  color:rgb(17, 2, 2);
+  text-align: center;
+  
+}
+
+ion-card#axis-selection ion-card-header ion-row ion-item {
+
+  color:rgb(17, 2, 2);
+  --background: rgba(var(--ion-color-primary-rgb), 0.33);
+  text-align: center;
+  padding-left: 86%;
+
+}
+
+ion-card#axis-selection ion-row {
+
+  padding-top: 0px;
+
+}
+
+ion-card#axis-selection ion-card-header {
+
+  padding-bottom: 0px;
+}
+
+ion-card#graph {
+
+  Width: 98%;
+  height: 70%;
+
+}

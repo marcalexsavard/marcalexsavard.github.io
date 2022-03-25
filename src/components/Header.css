@@ -1,0 +1,267 @@
+ion-row#remote {
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --inner-padding-top: 0;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    top: 0;
+}
+
+ion-row#remote ion-col {
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --inner-padding-top: 0;
+    margin-right: 2%;
+}
+
+/***** EMERG MARGIN *****/
+ion-row#remote ion-col#emerg-sysreset {
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --inner-padding-top: 0;
+    margin-left: 5%;
+}
+
+/***** CALIB BUTTON *****/
+ion-row#remote ion-col ion-button#calib {
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --inner-padding-top: 0;
+    font-size: large;
+    width: 80%;
+    height: 70%;
+    right: 0;
+    margin-top: 10px;
+}
+
+/***** QAB BUTTONS *****/
+ion-row#remote ion-col ion-item{
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    --padding-start: 0;
+    padding-top: 12%;
+    
+    height: 100%;
+    width: 64px;
+
+    text-align: center;
+}
+
+/***** QAB IMAGES *****/
+ion-row#remote ion-item img {
+    height: 100%;
+    width: 100%;
+}
+
+ion-row#remote ion-col#sys-info {
+    font-size: larger;
+    padding-left: 5%;
+    padding-top: 2.2%;
+    padding-bottom: 2%;
+}
+
+ion-row#remote ion-col#sys-info ion-col {
+    padding: 0 0;
+}
+
+ion-row#remote ion-col#sys-info ion-col#desc {
+    text-align: right;
+}
+
+/***** PLAY POPOVER *****/
+ion-popover#play-pop {
+    text-align: center;
+    --height: 25%;
+    --width: 40%;
+    font-size: 135%;
+}
+
+ion-popover#play-pop ion-col#desc {
+    padding-top: 7%;
+}
+
+ion-popover#play-pop ion-item {
+    padding: 5% 30%;
+    margin-left: 0%;
+    text-align: center;
+    --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+    width: 100%;
+    font-size: 70%;
+}
+
+/***** STOP POPOVER *****/
+ion-popover#stop-pop {
+    text-align: center;
+    --height: 25%;
+    --width: 40%;
+    font-size: 135%;
+}
+
+ion-popover#stop-pop ion-col#desc {
+    padding-top: 7%;
+}
+
+ion-popover#stop-pop ion-item {
+    padding: 5% 28%;
+    margin-left: 0%;
+    text-align: center;
+    --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+    width: 100%;
+    font-size: 70%;
+}
+
+/***** EMERG-SYS POPOVER *****/
+ion-popover#emerg-sys-pop {
+    text-align: center;
+    --height: 25%;
+    --width: 40%;
+    font-size: 135%;
+}
+
+ion-popover#emerg-sys-pop ion-col#desc {
+    padding-top: 7%;
+}
+
+ion-popover#emerg-sys-pop ion-item {
+    padding: 5% 30%;
+    margin-left: 0%;
+    text-align: center;
+    --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+    width: 100%;
+    font-size: 70%;
+}
+
+@media (max-width: 1050px){
+    ion-row#remote {
+        --inner-padding-end: 0;
+        --inner-padding-start: 0;
+        --inner-padding-top: 0;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+    }
+    
+    ion-row#remote ion-col {
+        --inner-padding-end: 0;
+        --inner-padding-start: 0;
+        --inner-padding-top: 0;
+        margin-right: 2%;
+    }
+    
+    ion-row#remote ion-col#emerg-sysreset {
+        --inner-padding-end: 0;
+        --inner-padding-start: 0;
+        --inner-padding-top: 0;
+        margin-left: 5%;
+    }
+    
+    ion-row#remote ion-col ion-button#calib {
+        --inner-padding-end: 0;
+        --inner-padding-start: 0;
+        --inner-padding-top: 0;
+        font-size: small;
+        width: 80%;
+        height: 70%;
+        right: 0;
+        margin-top: 8px;
+    }
+    
+    /***** QAB BUTTONS *****/
+    ion-row#remote ion-col ion-item{
+        --padding-end: 0;
+        --inner-padding-end: 0;
+        --padding-start: 0;
+        padding-top: 12%;
+    
+        height: 100%;
+        width: 45px;
+    
+        text-align: center;
+    }
+    
+    /***** QAB IMAGES *****/
+    ion-row#remote ion-item img {
+        height: 100%;
+        width: 100%;
+    }
+
+    ion-row#remote ion-col#sys-info {
+        font-size: larger;
+        padding-left: 5%;
+        padding-top: 2.2%;
+        padding-bottom: 2%;
+    }
+    
+    ion-row#remote ion-col#sys-info ion-col {
+        padding: 0 0;
+    }
+    
+    ion-row#remote ion-col#sys-info ion-col#desc {
+        text-align: right;
+    }
+    
+    /***** PLAY POPOVER *****/
+    ion-popover#play-pop {
+        text-align: center;
+        --height: 25%;
+        --width: 40%;
+        font-size: 135%;
+    }
+
+    ion-popover#play-pop ion-col#desc {
+        padding-top: 7%;
+    }
+
+    ion-popover#play-pop ion-item {
+        padding: 5% 30%;
+        margin-left: 0%;
+        text-align: center;
+        --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+        width: 100%;
+        font-size: 70%;
+    }
+
+    /***** STOP POPOVER *****/
+    ion-popover#stop-pop {
+        text-align: center;
+        --height: 25%;
+        --width: 40%;
+        font-size: 135%;
+    }
+
+    ion-popover#stop-pop ion-col#desc {
+        padding-top: 7%;
+    }
+
+    ion-popover#stop-pop ion-item {
+        padding: 5% 28%;
+        margin-left: 0%;
+        text-align: center;
+        --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+        width: 100%;
+        font-size: 70%;
+    }
+
+    /***** EMERG-SYS POPOVER *****/
+    ion-popover#emerg-sys-pop {
+        text-align: center;
+        --height: 25%;
+        --width: 40%;
+        font-size: 135%;
+    }
+
+    ion-popover#emerg-sys-pop ion-col#desc {
+        padding-top: 7%;
+    }
+
+    ion-popover#emerg-sys-pop ion-item {
+        padding: 5% 30%;
+        margin-left: 0%;
+        text-align: center;
+        --background: rgba(var(--ion-color-secondary-rgb), 0.14);
+        width: 100%;
+        font-size: 70%;
+    }
+}

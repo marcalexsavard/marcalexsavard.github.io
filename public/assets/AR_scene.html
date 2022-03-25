@@ -1,0 +1,139 @@
+<!doctype HTML>
+<html>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+	<script src="./websocket.js"></script>
+
+    <!-- style for the loader -->
+    <!--<style>
+        .arjs-loader {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.8);
+          z-index: 9999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .arjs-loader div {
+          text-align: center;
+          font-size: 1.25em;
+          color: white;
+        }
+    </style>-->
+  <body style="margin : 0px; overflow: hidden;" onpageshow="wsConnect()" onpagehide="wsDisconnect()">
+
+    <!--<div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>-->
+    
+    <a-scene vr-mode-ui='enabled: false;' embedded arjs='debugUIEnabled: false;'>
+       <a-marker preset="hiro">
+    <!--<a-scene vr-mode-ui='enabled: false;' 
+             renderer='logarithmicDepthBuffer: true;'
+             embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+        <a-nft 
+            type='nft' url='./nft/trex' 
+            smooth='true' smoothCount='10' smoothTolerance='.01' smoothThreshold='5'>-->
+            <a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
+                <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
+                    <a-entity position="-0.1 0.9 0.2" text="value: Right Aileron; align: center; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 0.3 0.2" text="value: POS : ; align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.2 0.2" text="value: LOAD : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.7 0.2" text="value: LOADING : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-ail-pos' position="3 0.3 0.2" text="value: 5; align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-ail-ld' position="3 -0.2 0.2" text="value: 3578 lb;  align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-ail-lding' position="3 -0.7 0.2" text="value: ON;  align: left; color: black; width: 6; height: auto"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
+            </a-entity>
+        <!--</a-nft>-->
+        </a-marker>
+
+        <!--LEFT AILERON-->
+        <!--<a-marker preset="hiro">-->
+        <!--<a-nft 
+            type='nft' url='./nft/trex' 
+            smooth='true' smoothCount='10' smoothTolerance='.01' smoothThreshold='5'>-->
+        <!--<a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
+                <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
+                    <a-entity position="-0.1 0.9 0.2" text="value: Left Aileron; align: center; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 0.3 0.2" text="value: POS : ; align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.2 0.2" text="value: LOAD : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.7 0.2" text="value: LOADING : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='lf-ail-pos' position="3 0.3 0.2" text="value: 5; align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='lf-ail-ld' position="3 -0.2 0.2" text="value: 3578 lb;  align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='lf-ail-lding' position="3 -0.7 0.2" text="value: ON;  align: left; color: black; width: 6; height: auto"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
+            </a-entity>-->
+        <!--</a-nft>-->
+        <!--</a-marker>-->
+
+        <!--RIGHT ELEVATOR-->
+        <!--<a-marker preset="hiro">-->
+        <!--<a-nft 
+            type='nft' url='./nft/trex' 
+            smooth='true' smoothCount='10' smoothTolerance='.01' smoothThreshold='5'>-->
+        <!--<a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
+                <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
+                    <a-entity position="-0.1 0.9 0.2" text="value: Right Elevator; align: center; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 0.3 0.2" text="value: POS : ; align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.2 0.2" text="value: LOAD : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.7 0.2" text="value: LOADING : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-elv-pos' position="3 0.3 0.2" text="value: 5; align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-elv-ld' position="3 -0.2 0.2" text="value: 3578 lb;  align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rh-elv-lding' position="3 -0.7 0.2" text="value: ON;  align: left; color: black; width: 6; height: auto"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
+            </a-entity>-->
+        <!--</a-nft>-->
+        <!--</a-marker>-->
+
+        <!--LEFT ELEVATOR-->
+        <!--<a-marker preset="hiro">-->
+        <!--<a-nft 
+            type='nft' url='./nft/trex' 
+            smooth='true' smoothCount='10' smoothTolerance='.01' smoothThreshold='5'>-->
+        <!--<a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
+                <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
+                    <a-entity position="-0.1 0.9 0.2" text="value: Left Elevator; align: center; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 0.3 0.2" text="value: POS : ; align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.2 0.2" text="value: LOAD : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.7 0.2" text="value: LOADING : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='lf-elv-pos' position="3 0.3 0.2" text="value: 5; align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='lf-elv-ld' position="3 -0.2 0.2" text="value: 3578 lb;  align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='lf-elv-lding' position="3 -0.7 0.2" text="value: ON;  align: left; color: black; width: 6; height: auto"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
+            </a-entity>-->
+        <!--</a-nft>-->
+        <!--</a-marker>-->
+
+        <!--RUDDER-->
+        <!--<a-marker preset="hiro">-->
+        <!--<a-nft 
+            type='nft' url='./nft/trex' 
+            smooth='true' smoothCount='10' smoothTolerance='.01' smoothThreshold='5'>-->
+        <!--<a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
+                <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
+                    <a-entity position="-0.1 0.9 0.2" text="value: Rudder; align: center; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 0.3 0.2" text="value: POS : ; align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.2 0.2" text="value: LOAD : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity position="-3.5 -0.7 0.2" text="value: LOADING : ;  align: right; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rudder-pos' position="3 0.3 0.2" text="value: 5; align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rudder-ld' position="3 -0.2 0.2" text="value: 3578 lb;  align: left; color: black; width: 6; height: auto"></a-entity>
+                    <a-entity id='rudder-lding' position="3 -0.7 0.2" text="value: ON;  align: left; color: black; width: 6; height: auto"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
+            </a-entity>-->
+        <!--</a-nft>-->
+        <!--</a-marker>-->
+    <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>

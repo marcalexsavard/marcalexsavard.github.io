@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <line x1="62.5" y1="150" x2="62.5" y2="50" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="62.5" y1="50" x2="110" y2="50" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="110"  y1="50" x2="137.5" y2="77.5" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="137.5" y1="77.5" x2="137.5" y2="150" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="137.5" y1="150" x2="62.5" y2="150" style="stroke:rgb(0,0,255);stroke-width:4" />
+
+  <line x1="110" y1="50" x2="110" y2="77.5" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="110" y1="77.5" x2="137.5" y2="77.5" style="stroke:rgb(0,0,255);stroke-width:4" />
+
+  <line x1="75" y1="70" x2="110" y2="70" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="75" y1="85" x2="125" y2="85" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="75" y1="100" x2="125" y2="100" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="75" y1="115" x2="125" y2="115" style="stroke:rgb(0,0,255);stroke-width:4" />
+  <line x1="75" y1="130" x2="125" y2="130" style="stroke:rgb(0,0,255);stroke-width:4" />
+</svg>

@@ -1,0 +1,48 @@
+ion-content#login {
+    width: 100%;
+    height: 100%;
+}
+
+ion-content#login ion-card {
+    border: 1px solid black;
+    margin-top: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+ion-content#login ion-card-title {
+    padding: 2%;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Bebas Neue';
+    color: black;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+ion-content#login ion-card-content {
+    text-align: right;
+}
+
+ion-content#login ion-item#enter {
+    --inner-padding-right: 0;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Staatliches';
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 3%;
+    --color: rgba(0, 0, 0, 0.1);
+    --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+}
+
+ion-content#login ion-item.unlocked#enter {
+    --inner-padding-right: 0;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Staatliches';
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 3%;
+    --color: rgba(0, 0, 0, 0.8);
+    --background: rgba(var(--ion-color-secondary-rgb), 0.2);
+}
