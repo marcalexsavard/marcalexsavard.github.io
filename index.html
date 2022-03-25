@@ -19,7 +19,28 @@
     getISS();
   </script>
   
+   <script>
+    AFRAME.registerComponent("foo",{
+    schema:{
+    sphereColor: {type: 'string', default: 'green'}
+    },
+    init:function(){
+      let base = document.createElement('a-box');
+      let sphere = document.createElement('a-sphere');
+      base.setAttribute('position',"0 1 0");
+      base.setAttribute('color',"red");
+      sphere.setAttribute('position',"0 1.5 0");
+      console.log(this.data.sphereColor);
+  sphere.setAttribute('color',this.data.sphereColor);
+      this.el.appendChild(base);
+      base.appendChild(sphere);  
+    }
+    });
+  </script>
   
+  <script> 
+    text.setAttribute('value', "lat");
+  </script>
 
   <body style="margin : 0px; overflow: hidden;" onpageshow="wsConnect()" onpagehide="wsDisconnect()">
     <a-scene vr-mode-ui='enabled: false;' embedded arjs='debugUIEnabled: false;'>
@@ -46,7 +67,7 @@
         -->
 
         <!-- Text -->
-        <!--
+        
         <a-entity 
         position="0 0 0" 
         geometry="primitive: plane; height: 3; width: 3"
@@ -64,7 +85,7 @@
         <a-entity
         id="id01"
         position="0 0.5 0.2" 
-        text="font: dejavu; align: center; width: 3; color: white; value: {lat}"
+        text="font: dejavu; align: center; width: 3; color: white; value: Allo"
         rotation="-90 0 0">
         ></a-entity>  
         
@@ -81,9 +102,9 @@
           <img id="Marc" src="Image\Marc_wow.jpg" />
         </a-asset>
         
-        -->
-
         
+
+        <!--
          <a-entity position="-3 0 -3" geometry="primitive: plane; height: 6; width: 6" material="opacity: 0.0; transparent: true" rotation="-90 0 0">
                 <a-entity position="-0.5 0 0.5" geometry="primitive: plane; height: 3; width: 4" material="side: double">
                     <a-entity position="-0.1 0.9 0.2" text="value: Right Aileron; align: center; color: black; width: 6; height: auto"></a-entity>
@@ -96,7 +117,7 @@
                 </a-entity>
                 <a-entity geometry="primitive: triangle; vertex-a: 1 0 0; vertex-b: 0 -1 0; vertex-c: 3 -3 0; width: auto; height: auto" material="side: double"></a-entity>
             </a-entity>
-        
+        -->
         
 
 
